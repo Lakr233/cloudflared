@@ -1,1 +1,3 @@
 Cloudflared with health checking tools, do whatever you want.
+
+`docker pull ghcr.io/Lakr233/cloudflared:main`
