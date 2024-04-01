@@ -65,4 +65,4 @@ jobs:
         run: echo "${TAGS}" | xargs -I {} cosign sign --yes {}@${DIGEST}
 
       - name: Keepalive Workflow
-        uses: gautamkrishnar/keepalive-workflow@1.2.3
+        uses: gautamkrishnar/keepalive-workflow@v2
