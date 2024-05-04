@@ -1,3 +1,17 @@
 Cloudflared with health checking tools, do whatever you want.
 
 `docker pull ghcr.io/Lakr233/cloudflared:main`
+
+```
+services:
+  argo:
+    image: ghcr.io/lakr233/cloudflared:main
+    restart: always
+    command: tunnel --metrics 0.0.0.0:3333 run --protocol http2 --token __TOKEN__
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:3333/ready || exit 1"]
+      interval: "3s"
+      timeout: "3s"
+      retries: "3"
+      start_period: "15s"
+```
