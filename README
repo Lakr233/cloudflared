@@ -12,6 +12,6 @@ services:
       test: ["CMD-SHELL", "curl -f http://localhost:3333/ready || exit 1"]
       interval: "3s"
       timeout: "3s"
-      retries: "3"
+      retries: 3
       start_period: "15s"
 ```
